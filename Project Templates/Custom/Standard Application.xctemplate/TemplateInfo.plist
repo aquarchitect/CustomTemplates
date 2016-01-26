@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.hainguyen.dt.unit.customCocoaTouchApplicationBase</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.applicationBase</string>
+		<string>com.apple.dt.unit.iosBase</string>
+		<string>com.apple.dt.unit.languageChoice</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template provides a starting point for an application that uses a programmatic single view.</string>
+    <key>SortOrder</key>
+    <integer>1</integer>
+    <key>Targets</key>
+    <array>
+        <dict>
+			<key>TargetIdentifier</key>
+			<string>com.apple.dt.cocoaTouchApplicationTarget</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+                <key>SWIFT_OBJC_BRIDGING_HEADER</key>
+                <string>$(PRODUCT_MODULE_NAME)/Bridging.h</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+			</dict>
+		</dict>
+    </array>
+    <key>Options</key>
+    <array>
+        <!--Device Family-->
+        <dict>
+			<key>Identifier</key>
+			<string>universalDeviceFamily</string>
+			<key>Name</key>
+			<string>Devices:</string>
+			<key>Description</key>
+			<string>Which device family to create a project for</string>
+			<key>SortOrder</key>
+			<integer>1</integer>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Universal</string>
+            <key>Values</key>
+            <array>
+                <string>Universal</string>
+                <string>iPhone</string>
+                <string>iPad</string>
+            </array>
+			<key>Units</key>
+			<dict>
+				<key>iPhone</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>Assets.xcassets</key>
+						<dict>
+							<key>Path</key>
+							<string>Images-iPhone.xcassets</string>
+							<key>SortOrder</key>
+							<integer>100</integer>
+						</dict>
+					</dict>
+				</dict>
+				<key>iPad</key>
+				<dict>
+					<key>Project</key>
+					<dict>
+						<key>SharedSettings</key>
+						<dict>
+							<key>TARGETED_DEVICE_FAMILY</key>
+							<string>2</string>
+						</dict>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>Info.plist:UISupportedInterfaceOrientations~iPad</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>Assets.xcassets</key>
+						<dict>
+							<key>Path</key>
+							<string>Images-iPad.xcassets</string>
+							<key>SortOrder</key>
+							<integer>100</integer>
+						</dict>
+					</dict>
+				</dict>
+				<key>Universal</key>
+				<dict>
+					<key>Project</key>
+					<dict>
+						<key>SharedSettings</key>
+						<dict>
+							<key>TARGETED_DEVICE_FAMILY</key>
+							<string>1,2</string>
+						</dict>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+						<string>Info.plist:UISupportedInterfaceOrientations~iPad</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>Assets.xcassets</key>
+						<dict>
+							<key>Path</key>
+							<string>Images-Universal.xcassets</string>
+							<key>SortOrder</key>
+							<integer>100</integer>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+        <!--Unit Tests-->
+        <dict>
+            <key>Identifier</key>
+            <string>hasUnitTests</string>
+            <key>Name</key>
+            <string>Include Unit Tests</string>
+            <key>NotPersisted</key>
+            <false/>
+            <key>SortOrder</key>
+            <integer>100</integer>
+            <key>Type</key>
+            <string>checkbox</string>
+            <key>Default</key>
+            <string>true</string>
+            <key>Units</key>
+            <dict>
+                <key>true</key>
+                <dict>
+                    <key>Components</key>
+                    <array>
+                        <dict>
+                            <key>Identifier</key>
+                            <string>com.apple.dt.unit.cocoaTouchApplicationUnitTestBundle</string>
+                            <key>Name</key>
+                            <string>___PACKAGENAME___Tests</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+        <!--UI Tests-->
+        <dict>
+            <key>Identifier</key>
+            <string>hasUITests</string>
+            <key>Name</key>
+            <string>Include UI Tests</string>
+            <key>NotPersisted</key>
+            <false/>
+            <key>SortOrder</key>
+            <integer>101</integer>
+            <key>Type</key>
+            <string>checkbox</string>
+            <key>Default</key>
+            <string>true</string>
+            <key>Units</key>
+            <dict>
+                <key>true</key>
+                <dict>
+                    <key>Components</key>
+                    <array>
+                        <dict>
+                            <key>Identifier</key>
+                            <string>com.apple.dt.unit.cocoaTouchApplicationUITestBundle</string>
+                            <key>Name</key>
+                            <string>___PACKAGENAME___UITests</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+        <!--Language Choice-->
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Swift</key>
+                <dict>
+                    <key>Nodes</key>
+					<array>
+                        <!--
+                         <string>main.swift:comments</string>
+                         <string>main.swift:imports:importCocoa</string>
+                         <string>main.swift:main:UIApplicationMain</string>
+                         -->
+                         <!--AppDelegate-->
+						<string>AppDelegate.swift:comments</string>
+                        <string>AppDelegate.swift:UIApplicationMain</string>
+						<string>AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)</string>
+						<string>AppDelegate.swift:implementation:properties:window</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions(func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?\) -&gt; Bool)</string>
+						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
+                        <!--ViewController-->
+                        <string>ViewController.swift:comments</string>
+                        <string>ViewController.swift:implementation(___FILEBASENAME___: UIViewController)</string>
+                        <string>ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+                        <string>ViewController.swift:implementation:methods:viewDidLoad:super</string>
+                        <!--BridgingHeader-->
+                        <string>Bridging.h:comments</string>
+                        <string>Bridging.h:imports:importCocoaTouch</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+                        <!--
+						<key>main.swift:main:UIApplicationMain</key>
+						<string>UIApplicationMain(C_ARGC, C_ARGV, nil, NSStringFromClass(AppDelegate.self))</string>
+                         -->
+                         <!--AppDelegate-->
+                        <key>AppDelegate.swift:UIApplicationMain</key>
+                        <string>@UIApplicationMain</string>
+						<key>AppDelegate.swift:implementation:properties:window</key>
+						<string>var window: UIWindow?</string>
+						<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+						<string>window = UIWindow(frame: UIScreen.mainScreen().bounds)
+window?.rootViewController = ViewController()
+window?.backgroundColor = .blackColor()
+window?.makeKeyAndVisible()
+                        </string>
+						<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</key>
+						<string>return true</string>
+                        <!--ViewController-->
+						<key>*:implementation:methods:viewDidLoad:super</key>
+						<string>super.viewDidLoad()</string>
+                        <!--BridgingHeader-->
+                        <key>Bridging.h:imports:importCocoaTouch</key>
+                        <string>@import UIKit;</string>
+					</dict>
+                </dict>
+            </dict>
+        </dict>
+        <!--Core Data-->
+        <dict>
+            <key>Identifier</key>
+			<string>coreData</string>
+			<key>Name</key>
+			<string>Use Core Data</string>
+			<key>Description</key>
+			<string>Whether the application should use the Core Data framework for storage</string>
+			<key>SortOrder</key>
+			<integer>1</integer>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>Units</key>
+            <dict>
+                <key>true</key>
+                <array>
+                    <dict>
+						<key>Nodes</key>
+						<array>
+							<string>___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</key>
+							<dict>
+								<key>Path</key>
+								<string>___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</string>
+                                <key>SortOrder</key>
+                                <integer>99</integer>
+							</dict>
+						</dict>
+					</dict>
+                </array>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+	<array>
+		<string>Info.plist:iPhone</string>
+        <string>Info.plist:UIRequiredDeviceCapabilities:base</string>
+		<string>Info.plist:LaunchScreen</string>
+		<string>Assets.xcassets</string>
+		<string>Base.lproj/LaunchScreen.storyboard</string>
+	</array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:iPhone</key>
+		<string>
+&lt;key&gt;LSRequiresIPhoneOS&lt;/key&gt;
+&lt;true/&gt;</string>
+        <key>Info.plist:UIRequiredDeviceCapabilities</key>
+        <dict>
+            <key>Beginning</key>
+            <string>
+&lt;key&gt;UIRequiredDeviceCapabilities&lt;/key&gt;
+&lt;array&gt;
+            </string>
+            <key>End</key>
+            <string>&lt;/array&gt;</string>
+            <key>Indent</key>
+            <integer>1</integer>
+        </dict>
+        <key>Info.plist:UIRequiredDeviceCapabilities:base</key>
+        <string>&lt;string&gt;armv7&lt;/string&gt;</string>
+		<key>Info.plist:statusBarTintForNavBar</key>
+		<string>
+&lt;key&gt;UIStatusBarTintParameters&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;UINavigationBar&lt;/key&gt;
+    &lt;dict&gt;
+        &lt;key&gt;Style&lt;/key&gt;
+        &lt;string&gt;UIBarStyleDefault&lt;/string&gt;
+        &lt;key&gt;Translucent&lt;/key&gt;
+        &lt;false/&gt;
+    &lt;/dict&gt;
+&lt;/dict&gt;
+        </string>
+		<key>Info.plist:LaunchScreen</key>
+		<string>
+&lt;key&gt;UILaunchStoryboardName&lt;/key&gt;
+&lt;string&gt;LaunchScreen&lt;/string&gt;
+        </string>
+		<key>Base.lproj/LaunchScreen.storyboard</key>
+		<dict>
+			<key>Path</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>SortOrder</key>
+			<integer>101</integer>
+		</dict>
+    </dict>
+</dict>
+</plist>
