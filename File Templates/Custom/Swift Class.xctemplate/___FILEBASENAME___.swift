@@ -6,6 +6,6 @@
 //  ___COPYRIGHT___
 //
 
-final class ___FILEBASENAMEASIDENTIFIER___: <#Super Class#> {
+final class ___FILEBASENAMEASIDENTIFIER___: <#SuperClass#> {
 
 }

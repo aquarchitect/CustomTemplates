@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Summary</key>
+	<string>An OS X Module</string>
+	<key>Description</key>
+	<string>Taking advantages of Playground auto-completion to build modules.</string>
+	<key>SortOrder</key>
+	<string>6</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.playground</string>
+	<key>AllowedTypes</key>
+	<array>
+		<string>com.apple.dt.playground</string>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>Module</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.macosx</string>
+	</array>
+</dict>
+</plist>
