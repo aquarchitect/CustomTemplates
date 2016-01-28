@@ -8,3 +8,5 @@ This repository includes:
 - *Custom Swift* file templates - creating Swift files without a need of importing frameworks into files because of **Bridging.h**.
 
 - *Custom Module* playground template - an experimental template for Swift packaging by taking advantages of *Source* folder.
+
+> Installing directory: *~/Library/Developer/Templates/*
