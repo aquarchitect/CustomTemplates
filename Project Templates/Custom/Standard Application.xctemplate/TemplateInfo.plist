@@ -293,6 +293,7 @@ window?.makeKeyAndVisible()
         <string>Info.plist:UIRequiredDeviceCapabilities:base</string>
 		<string>Info.plist:LaunchScreen</string>
 		<string>Assets.xcassets</string>
+        <string>Assets.xcassets/AppIcon.appiconset/Makefile</string>
 		<string>Base.lproj/LaunchScreen.storyboard</string>
 	</array>
     <key>Definitions</key>
@@ -333,6 +334,11 @@ window?.makeKeyAndVisible()
 &lt;key&gt;UILaunchStoryboardName&lt;/key&gt;
 &lt;string&gt;LaunchScreen&lt;/string&gt;
         </string>
+        <key>Assets.xcassets/AppIcon.appiconset/Makefile</key>
+        <dict>
+            <key>Path</key>
+            <string>Makefile</string>
+        </dict>
 		<key>Base.lproj/LaunchScreen.storyboard</key>
 		<dict>
 			<key>Path</key>
