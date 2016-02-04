@@ -32,6 +32,22 @@
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks</string>
 			</dict>
+            <key>BuildPhases</key>
+            <array>
+                <dict>
+                    <key>Class</key>
+                    <string>ShellScript</string>
+                    <key>ShellPath</key>
+                    <string>/bin/sh</string>
+                    <key>ShellScript</key>
+                    <string>
+TAGS="TODO:|FIXME:"
+ERRORTAG="ERROR:"
+
+find "${SRCROOT}" -name "*.swift" -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($TAGS).*\$|($ERRORTAG).*\$" | perl -pe "s/($TAGS)/ warning: \$1/" | perl -pe "s/($ERRORTAG)/ error: \$1/"
+                    </string>
+                </dict>
+            </array>
 		</dict>
     </array>
     <key>Options</key>
@@ -68,6 +84,8 @@
 					<dict>
 						<key>Assets.xcassets</key>
 						<dict>
+                            <key>Group</key>
+                            <string>Supporting</string>
 							<key>Path</key>
 							<string>Images-iPhone.xcassets</string>
 							<key>SortOrder</key>
@@ -93,6 +111,8 @@
 					<dict>
 						<key>Assets.xcassets</key>
 						<dict>
+                            <key>Group</key>
+                            <string>Supporting</string>
 							<key>Path</key>
 							<string>Images-iPad.xcassets</string>
 							<key>SortOrder</key>
@@ -119,6 +139,8 @@
 					<dict>
 						<key>Assets.xcassets</key>
 						<dict>
+                            <key>Group</key>
+                            <string>Supporting</string>
 							<key>Path</key>
 							<string>Images-Universal.xcassets</string>
 							<key>SortOrder</key>
@@ -197,20 +219,20 @@
                 <key>Swift</key>
                 <dict>
                     <key>Nodes</key>
-					<array>
+                    <array>
                         <!--
                          <string>main.swift:comments</string>
                          <string>main.swift:imports:importCocoa</string>
                          <string>main.swift:main:UIApplicationMain</string>
                          -->
                          <!--AppDelegate-->
-						<string>AppDelegate.swift:comments</string>
+                        <string>AppDelegate.swift:comments</string>
                         <string>AppDelegate.swift:UIApplicationMain</string>
-						<string>AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)</string>
-						<string>AppDelegate.swift:implementation:properties:window</string>
+                        <string>AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)</string>
+                        <string>AppDelegate.swift:implementation:properties:window</string>
                         <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions(func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?\) -&gt; Bool)</string>
-						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
-						<string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
                         <!--ViewController-->
                         <string>ViewController.swift:comments</string>
                         <string>ViewController.swift:implementation(___FILEBASENAME___: UIViewController)</string>
@@ -219,33 +241,33 @@
                         <!--BridgingHeader-->
                         <string>Bridging.h:comments</string>
                         <string>Bridging.h:imports:importCocoaTouch</string>
-					</array>
-					<key>Definitions</key>
-					<dict>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
                         <!--
-						<key>main.swift:main:UIApplicationMain</key>
-						<string>UIApplicationMain(C_ARGC, C_ARGV, nil, NSStringFromClass(AppDelegate.self))</string>
+                        <key>main.swift:main:UIApplicationMain</key>
+                        <string>UIApplicationMain(C_ARGC, C_ARGV, nil, NSStringFromClass(AppDelegate.self))</string>
                          -->
                          <!--AppDelegate-->
                         <key>AppDelegate.swift:UIApplicationMain</key>
                         <string>@UIApplicationMain</string>
-						<key>AppDelegate.swift:implementation:properties:window</key>
-						<string>var window: UIWindow?</string>
-						<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
-						<string>window = UIWindow(frame: UIScreen.mainScreen().bounds)
+                        <key>AppDelegate.swift:implementation:properties:window</key>
+                        <string>var window: UIWindow?</string>
+                        <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+                        <string>window = UIWindow(frame: UIScreen.mainScreen().bounds)
 window?.rootViewController = ViewController()
 window?.backgroundColor = .blackColor()
 window?.makeKeyAndVisible()
                         </string>
-						<key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</key>
-						<string>return true</string>
+                        <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</key>
+                        <string>return true</string>
                         <!--ViewController-->
-						<key>*:implementation:methods:viewDidLoad:super</key>
-						<string>super.viewDidLoad()</string>
+                        <key>*:implementation:methods:viewDidLoad:super</key>
+                        <string>super.viewDidLoad()</string>
                         <!--BridgingHeader-->
                         <key>Bridging.h:imports:importCocoaTouch</key>
                         <string>@import UIKit;</string>
-					</dict>
+                    </dict>
                 </dict>
             </dict>
         </dict>
@@ -295,6 +317,7 @@ window?.makeKeyAndVisible()
 		<string>Assets.xcassets</string>
         <string>Assets.xcassets/AppIcon.appiconset/Makefile</string>
 		<string>Base.lproj/LaunchScreen.storyboard</string>
+        <string>Bridging.h</string>
 	</array>
     <key>Definitions</key>
     <dict>
@@ -336,16 +359,27 @@ window?.makeKeyAndVisible()
         </string>
         <key>Assets.xcassets/AppIcon.appiconset/Makefile</key>
         <dict>
+            <key>Group</key>
+            <string>Supporting</string>
             <key>Path</key>
             <string>Makefile</string>
+            <key>TargetIndices</key>
+            <array/>
         </dict>
 		<key>Base.lproj/LaunchScreen.storyboard</key>
 		<dict>
+            <key>Group</key>
+            <string>Supporting</string>
 			<key>Path</key>
 			<string>LaunchScreen.storyboard</string>
 			<key>SortOrder</key>
 			<integer>101</integer>
 		</dict>
+        <key>Bridging.h</key>
+        <dict>
+            <key>Group</key>
+            <string>Supporting</string>
+        </dict>
     </dict>
 </dict>
 </plist>
