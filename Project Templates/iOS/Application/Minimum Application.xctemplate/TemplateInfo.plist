@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.minimumApplication</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.minimumApplicationBase</string>
+    </array>
+    <key>Description</key>
+    <string>This template provides a starting point for an application that uses a programmatic single view.</string>
+    <key>Concrete</key>
+    <true/>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>embeddingMyKit</string>
+            <key>Name</key>
+            <string>Embed MyKit</string>
+            <key>SortOrder</key>
+            <integer>100</integer>
+            <key>Type</key>
+            <string>checkbox</string>
+            <key>Default</key>
+            <string>true</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Swift</key>
+                <dict>
+                    <key>RequiredOptions</key>
+                    <dict>
+                        <key>embeddingMyKit</key>
+                        <string>true</string>
+                    </dict>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+                        <string>window = UIWindow(frame: UIScreen.mainScreen().bounds).then {
+    $0.rootViewController = ViewController()
+    $0.backgroundColor = .blackColor()
+    $0.makeKeyAndVisible()
+}
+</string>
+                        <key>Bridging.h:imports:importCocoaTouch</key>
+                        <string>@import MyKit;</string>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
