@@ -8,7 +8,7 @@
     <string>com.apple.dt.unit.minimumApplication</string>
     <key>Ancestors</key>
     <array>
-        <string>com.apple.dt.unit.minimumApplicationBase</string>
+        <string>com.apple.dt.unit.minimumBase</string>
     </array>
     <key>Description</key>
     <string>This template provides a starting point for an application that uses a programmatic single view.</string>
@@ -16,15 +16,6 @@
     <true/>
     <key>SortOrder</key>
     <integer>100</integer>
-    <key>Targets</key>
-    <array>
-        <dict>
-            <key>Frameworks</key>
-            <array>
-                <string>MyKit</string>
-            </array>
-        </dict>
-    </array>
     <key>Options</key>
     <array>
         <dict>
@@ -81,6 +72,8 @@
             <string>Absolute</string>
             <key>Path</key>
             <string>~/Developments/Swift/MyKit/MyKit.xcodeproj</string>
+            <key>TargetIndices</key>
+            <array/>
         </dict>
     </dict>
 </dict>
