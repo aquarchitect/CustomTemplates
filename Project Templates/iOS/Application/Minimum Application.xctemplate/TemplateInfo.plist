@@ -14,6 +14,17 @@
     <string>This template provides a starting point for an application that uses a programmatic single view.</string>
     <key>Concrete</key>
     <true/>
+    <key>SortOrder</key>
+    <integer>100</integer>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>Frameworks</key>
+            <array>
+                <string>MyKit</string>
+            </array>
+        </dict>
+    </array>
     <key>Options</key>
     <array>
         <dict>
@@ -50,11 +61,27 @@
 }
 </string>
                         <key>Bridging.h:imports:importCocoaTouch</key>
-                        <string>@import MyKit;</string>
+                        <string>@import UIKit;
+@import MyKit;
+</string>
                     </dict>
                 </dict>
             </dict>
         </dict>
     </array>
+    <key>Nodes</key>
+    <array>
+        <string>MyKit.xcodeproj</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>MyKit.xcodeproj</key>
+        <dict>
+            <key>PathType</key>
+            <string>Absolute</string>
+            <key>Path</key>
+            <string>~/Developments/Swift/MyKit/MyKit.xcodeproj</string>
+        </dict>
+    </dict>
 </dict>
 </plist>

@@ -12,8 +12,6 @@
         <string>com.apple.dt.unit.iosBase</string>
         <string>com.apple.dt.unit.languageChoice</string>
     </array>
-    <key>SortOrder</key>
-    <integer>1</integer>
     <key>Targets</key>
     <array>
         <dict>
@@ -259,7 +257,9 @@ window?.makeKeyAndVisible()
                         <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</key>
                         <string>return true</string>
                         <key>*:implementation:methods:viewDidLoad:super</key>
-                        <string>super.viewDidLoad()</string>
+                        <string>super.viewDidLoad()
+
+</string>
                         <key>Bridging.h</key>
                         <dict>
                             <key>Group</key>
