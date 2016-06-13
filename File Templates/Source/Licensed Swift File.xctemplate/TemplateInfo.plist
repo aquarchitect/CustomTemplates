@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>An empty Swift file with an embedded software license.</string>
+	<key>Summary</key>
+	<string>An empty Swift file</string>
+	<key>Concrete</key>
+	<false/>
+	<key>SortOrder</key>
+	<integer>4</integer>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>File</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.swift</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>license</string>
+			<key>Name</key>
+			<string>License:</string>
+			<key>Descriptiont</key>
+			<string>The license to embed ionto the source file.</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Unlicensed</string>
+			<key>Values</key>
+			<array>
+				<string>MIT Licensed</string>
+				<string>Unlicensed</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

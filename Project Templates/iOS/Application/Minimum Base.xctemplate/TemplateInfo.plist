@@ -12,6 +12,10 @@
         <string>com.apple.dt.unit.iosBase</string>
         <string>com.apple.dt.unit.languageChoice</string>
     </array>
+    <key>Description</key>
+    <string>This template provides a starting point for an application that uses a programmatic single view.</string>
+    <key>Concrete</key>
+    <false/>
     <key>Targets</key>
     <array>
         <dict>
