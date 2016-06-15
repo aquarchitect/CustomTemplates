@@ -2,7 +2,7 @@
  * ___FILENAME___
  * ___PROJECTNAME___
  *
- * Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___.
+ * Copyright (c) ___YEAR___ ___FULLUSERNAME___.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
