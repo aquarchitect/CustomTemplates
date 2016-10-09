@@ -45,9 +45,9 @@
                     <key>Definitions</key>
                     <dict>
                         <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
-                        <string>window = UIWindow(frame: UIScreen.mainScreen().bounds).then {
+                        <string>window = UIWindow(frame: UIScreen.main.bounds).then {
     $0.rootViewController = ViewController()
-    $0.backgroundColor = .blackColor()
+    $0.backgroundColor = .black
     $0.makeKeyAndVisible()
 }
 </string>

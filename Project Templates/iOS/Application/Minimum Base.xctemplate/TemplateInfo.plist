@@ -80,8 +80,6 @@ find "${SRCROOT}" -name "*.swift" -print0 | xargs -0 egrep --with-filename --lin
                     <dict>
                         <key>Assets.xcassets</key>
                         <dict>
-                            <key>Group</key>
-                            <string>Supporting</string>
                             <key>Path</key>
                             <string>Images-iPhone.xcassets</string>
                             <key>SortOrder</key>
@@ -107,8 +105,6 @@ find "${SRCROOT}" -name "*.swift" -print0 | xargs -0 egrep --with-filename --lin
                     <dict>
                         <key>Assets.xcassets</key>
                         <dict>
-                            <key>Group</key>
-                            <string>Supporting</string>
                             <key>Path</key>
                             <string>Images-iPad.xcassets</string>
                             <key>SortOrder</key>
@@ -135,8 +131,6 @@ find "${SRCROOT}" -name "*.swift" -print0 | xargs -0 egrep --with-filename --lin
                     <dict>
                         <key>Assets.xcassets</key>
                         <dict>
-                            <key>Group</key>
-                            <string>Supporting</string>
                             <key>Path</key>
                             <string>Images-Universal.xcassets</string>
                             <key>SortOrder</key>
@@ -239,7 +233,7 @@ self.window.backgroundColor = [UIColor whiteColor];
                         <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
                         <string>ViewController.swift:comments</string>
                         <string>ViewController.swift:implementation(___FILEBASENAME___: UIViewController)</string>
-                        <string>ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+                        <string>ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad())</string>
                         <string>ViewController.swift:implementation:methods:viewDidLoad:super</string>
                         <string>Bridging.h</string>
                         <string>Bridging.h:comments</string>
@@ -252,9 +246,9 @@ self.window.backgroundColor = [UIColor whiteColor];
                         <key>AppDelegate.swift:implementation:properties:window</key>
                         <string>var window: UIWindow?</string>
                         <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
-                        <string>window = UIWindow(frame: UIScreen.mainScreen().bounds)
+                        <string>window = UIWindow(frame: UIScreen.main.bounds)
 window?.rootViewController = ViewController()
-window?.backgroundColor = .blackColor()
+window?.backgroundColor = .black
 window?.makeKeyAndVisible()
 
 </string>
@@ -264,11 +258,6 @@ window?.makeKeyAndVisible()
                         <string>super.viewDidLoad()
 
 </string>
-                        <key>Bridging.h</key>
-                        <dict>
-                            <key>Group</key>
-                            <string>Supporting</string>
-                        </dict>
                         <key>Bridging.h:imports:importCocoaTouch</key>
                         <string>@import UIKit;</string>
                     </dict>
@@ -322,15 +311,6 @@ window?.makeKeyAndVisible()
 &lt;key&gt;UILaunchStoryboardName&lt;/key&gt;
 &lt;string&gt;LaunchScreen&lt;/string&gt;
         </string>
-        <key>Base.lproj/LaunchScreen.storyboard</key>
-        <dict>
-            <key>Group</key>
-            <string>Supporting</string>
-            <key>Path</key>
-            <string>LaunchScreen.storyboard</string>
-            <key>SortOrder</key>
-            <integer>101</integer>
-        </dict>
     </dict>
 </dict>
 </plist>
