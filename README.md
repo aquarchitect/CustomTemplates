@@ -1,7 +1,5 @@
-NoIB (No Interface Builder)
-===========================
-
-[![Platform Support](https://img.shields.io/badge/platforms-iOS%20-lightgrey.svg?style=flat-square)](https://developer.apple.com/xcode/download/)
+No Interface Builder (IB)
+=========================
 
 This repository includes:
 
